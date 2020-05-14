@@ -1,0 +1,70 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    viewBox="0 0 340 340"
+    class="logo-image"
+    (click)="scrollTo('home')"
+>
+    <g>
+        <path
+            transform="scale(0.45)"
+            d="m 279.83988,743.24641 c 0.22617,-231.24277 0.62457,-327.01174 0.44959,-597.71212 110.10868,368.7417 111.71302,371.05981 180.84389,600.81086 -81.55012,17.14386 -134.72962,7.23638 -181.29348,-3.09874 z"
+            style="fill: rgba(0, 0, 0, 0.87); stroke: none; stroke-width: 0.714286;"
+        />
+        <path
+            transform="scale(0.45)"
+            d="m 311.8851,6.1153636 c 24.53234,-4.4084347 41.94129,-5.45106417 51.03688,-6.34212922 38.52241,-0.286019 67.37172,0.30868495 114.98773,0.23858497 C 477.84026,181.97814 477.18731,358.18452 477.16522,546.09561 384.90864,246.35687 384.60962,245.74532 311.8851,6.1153636 Z"
+            style="fill: rgba(0, 0, 0, 0.87); stroke: none; stroke-width: 1.42857; fill-opacity: 1;"
+        />
+        <path
+            transform="scale(0.45)"
+            d="M 548.11939,0.00785985 C 617.07225,0.0248255 686.95268,0.02834798 755.90552,0 l -0.0258,208.44452 c -0.0229,184.87373 -1.84008,209.77445 -4.3186,222.3125 -9.75756,91.69238 -68.61195,216.50038 -202.96173,284.26786 -0.49449,-261.73576 -0.48,-444.14793 -0.48,-715.01702015 z"
+            style="fill: rgba(0, 0, 0, 0.87); stroke: none; stroke-width: 1.42857; fill-opacity: 1;"
+        />
+        <path
+            transform="scale(0.45)"
+            d="M 0.43096341,377.95276 C 0.69557946,222.933 90.209899,100.05788 206.72238,41.58774 c 0.86253,237.14766 0.84556,422.78477 0.80654,673.83024 C 52.409922,635.07046 -0.57308619,488.37646 0.43096341,377.95276 Z"
+            style="fill: rgba(0, 0, 0, 0.87); stroke: none; stroke-width: 0.714286;"
+        />
+    </g>
+</svg>
+
+<div class="menu">
+    <div
+        class="menu-item button"
+        id="menu-item-galery"
+        (click)="scrollTo('galery')"
+        [ngClass]="{ active: active === 'galery' }"
+    >
+        ПОРТФОЛИО
+        <div></div>
+    </div>
+    <div
+        class="menu-item button"
+        id="menu-item-about"
+        (click)="scrollTo('about')"
+        [ngClass]="{ active: active === 'about' }"
+    >
+        О СЕБЕ
+        <div></div>
+    </div>
+    <div
+        class="menu-item button"
+        id="menu-item-prices"
+        (click)="scrollTo('prices')"
+        [ngClass]="{ active: active === 'prices' }"
+    >
+        ЦЕНЫ И УСЛОВИЯ
+        <div></div>
+    </div>
+    <div
+        class="menu-item button"
+        id="menu-item-contacts"
+        (click)="scrollTo('contacts')"
+        [ngClass]="{ active: active === 'contacts' }"
+    >
+        КОНТАКТЫ
+        <div></div>
+    </div>
+</div>

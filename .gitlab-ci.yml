@@ -1,0 +1,11 @@
+pages:
+    stage: deploy
+    script:
+        - mkdir .public
+        - cp -r * .public
+        - mv dist/max-angular public
+    artifacts:
+        paths:
+            - public
+    only:
+        - master

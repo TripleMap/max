@@ -1,0 +1,67 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+body {
+    background: #f9f9f9;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Circle";
+    src: url(./assets/fonts/circle/Circe-Light.eot);
+    src: url(./assets/fonts/circle/Circe-Light.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/circle/Circe-Light.woff) format("woff");
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Circle";
+    src: url(./assets/fonts/circle/Circe-Regular.eot);
+    src: url(./assets/fonts/circle/Circe-Regular.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/circle/Circe-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Circle";
+    src: url(./assets/fonts/circle/Circe-Bold.eot);
+    src: url(./assets/fonts/circle/Circe-Bold.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/circle/Circe-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Circle";
+    src: url(./assets/fonts/circle/Circe-ExtraBold.eot);
+    src: url(./assets/fonts/circle/Circe-ExtraBold.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/circle/Circe-ExtraBold.woff) format("woff");
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(./assets/fonts/bebas/BebasNeueRegular.eot);
+    src: url(./assets/fonts/bebas/BebasNeueRegular.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/bebas/BebasNeueRegular.woff) format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(./assets/fonts/bebas/BebasNeueBold.eot);
+    src: url(./assets/fonts/bebas/BebasNeueBold.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/bebas/BebasNeueBold.woff) format("woff");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(./assets/fonts/bebas/BebasNeueBook.eot);
+    src: url(./assets/fonts/bebas/BebasNeueBook.eot?#iefix) format("embedded-opentype"),
+        url(./assets/fonts/bebas/BebasNeueBook.woff) format("woff");
+    font-style: normal;
+    font-weight: 200;
+}

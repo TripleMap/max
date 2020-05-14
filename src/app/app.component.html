@@ -1,0 +1,25 @@
+<div id="curtain"></div>
+<app-header id="header" (onMenuChange)="scrollTo($event)" [active]="active" *ngIf="isDesktop"></app-header>
+<app-mobile-menu
+    id="mobile-header"
+    (onMenuChange)="scrollTo($event)"
+    [active]="active"
+    *ngIf="!isDesktop"
+></app-mobile-menu>
+<app-body
+    id="body"
+    [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
+    (onScroll)="onScroll($event)"
+    (imageIndex)="showImageViewer($event)"
+    [onNextSub]="onNextSub"
+    [onPrevSub]="onPrevSub"
+></app-body>
+<app-image-viewer
+    id="imageViewer"
+    *ngIf="imageIndex !== undefined"
+    [imageIndex]="imageIndex"
+    (close)="hideImageViewer()"
+    [ngClass]="{ 'viewer-main': imageIndex !== undefined }"
+    (onNext)="onNext()"
+    (onPrev)="onPrev()"
+></app-image-viewer>

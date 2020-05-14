@@ -1,0 +1,12 @@
+:host {
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    position: relative;
+    &.mobile {
+        height: 100%;
+    }
+    &.desktop {
+        height: calc(100% - 108px);
+    }
+}

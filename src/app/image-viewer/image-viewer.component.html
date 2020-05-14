@@ -1,0 +1,27 @@
+<div
+    class="side before"
+    (click)="onPrevClick()"
+    (swipeleft)="onNextClick()"
+    (swipeup)="closeImage()"
+    (swiperight)="onPrevClick()"
+    (swipedown)="closeImage()"
+>
+    <div class="left" *ngIf="isDesktop"></div>
+</div>
+<div class="image-container">
+    <img [src]="imagePath" alt="Фотография пока еще не загрузилась" draggable="false" />
+</div>
+<div
+    class="side after"
+    (click)="onNextClick()"
+    (swipeleft)="onNextClick()"
+    (swipeup)="closeImage()"
+    (swiperight)="onPrevClick()"
+    (swipedown)="closeImage()"
+>
+    <div class="right" *ngIf="isDesktop"></div>
+</div>
+<div class="close" (click)="closeImage()">
+    <div class="vertical"></div>
+    <div class="horisontal"></div>
+</div>

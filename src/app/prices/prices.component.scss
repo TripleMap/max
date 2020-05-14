@@ -1,0 +1,118 @@
+:host {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.mobile {
+        height: 100%;
+    }
+    &.desktop {
+        min-height: 840px;
+    }
+
+    .mobile-wrapper {
+        overflow: auto;
+        height: calc(100% - 80px);
+        margin-top: 40px;
+    }
+
+    .subheader {
+        font-family: "Bebas Neue";
+        font-weight: 600;
+    }
+
+    .prices-flex {
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 1280px;
+    }
+
+    .prices-text {
+        font-family: "Circle";
+        font-weight: 400;
+        color: #3d3d3d;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .prices-text {
+        font-size: 1.3em;
+        line-height: 1.3em;
+        padding: 24px 90px 0;
+    }
+    .subheader {
+        font-size: 1.3em;
+        line-height: 3em;
+    }
+    .prices-flex {
+        padding: 24px 90px 0;
+        .prices-text {
+            padding: 0 !important;
+
+            &:first-child {
+                padding-right: 8px !important;
+            }
+            &:last-child {
+                padding-left: 8px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .prices-text {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 16px 90px 0;
+    }
+    .subheader {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .prices-flex {
+        padding: 16px 90px 0;
+        .prices-text {
+            padding: 0 !important;
+
+            &:first-child {
+                padding-right: 8px !important;
+            }
+            &:last-child {
+                padding-left: 8px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .prices-text {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 12px 20px 0;
+    }
+    .subheader {
+        font-size: 22px;
+        line-height: 48px;
+    }
+    .prices-flex {
+        padding: 12px 20px 0;
+        flex-direction: column;
+        .prices-text {
+            padding-top: 12px !important;
+            &:first-child {
+                padding-right: 0 !important;
+            }
+            &:last-child {
+                padding-left: 0 !important;
+            }
+        }
+    }
+}

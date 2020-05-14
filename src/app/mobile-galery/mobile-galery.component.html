@@ -1,0 +1,18 @@
+<div
+    id="galery-wrapper"
+    class="galery"
+    (touchstart)="touchstart($event)"
+    (touchmove)="touchmove($event)"
+    (mousewheel)="mousewheel($event)"
+>
+    <ng-container *ngFor="let image of imageList; let i = index" ()>
+        <div
+            id="{{ 'galery-item-' + i }}"
+            class="galery-item"
+            (click)="openFullSize(i)"
+            draggable="false"
+            [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+            alt="Фотография пока еще не загрузилась"
+        ></div>
+    </ng-container>
+</div>

@@ -1,0 +1,12 @@
+<div id="galery-wrapper" class="galery-wrapper" [appGaleryRoller]="imageList" (reach)="enableArrow($event)">
+    <ng-container *ngFor="let image of imageList; let i = index">
+        <img
+            id="{{ 'galery-item-' + i }}"
+            (click)="openFullSize(i)"
+            class="galery-item"
+            draggable="false"
+            [src]="image"
+            alt="Фотография пока еще не загрузилась"
+        />
+    </ng-container>
+</div>

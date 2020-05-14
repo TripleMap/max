@@ -1,0 +1,66 @@
+:host {
+    z-index: 100;
+    width: 100%;
+    height: calc(100% - 96px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 96px;
+
+    &.mobile {
+        height: 100%;
+    }
+    &.desktop {
+        min-height: 840px;
+    }
+}
+
+.messengers-plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 8px;
+}
+.messengers-plate a {
+    padding: 4px;
+    cursor: pointer;
+}
+.messengers-plate a img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.contacts-tel-mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+.contacts-tel-mail a {
+    text-decoration: none;
+    color: #3d3d3d !important;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 24px;
+}
+.contacts-tel-mail a:not(:first-child) {
+    margin-top: 8px;
+}
+.contacts-city-year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 8px;
+}
+.contacts-city-year span {
+    color: #3d3d3d;
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 24px;
+}

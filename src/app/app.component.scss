@@ -1,0 +1,19 @@
+#curtain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1d1d1d;
+    z-index: 1000;
+}
+
+app-image-viewer {
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewer-main {
+    z-index: 2000;
+}
