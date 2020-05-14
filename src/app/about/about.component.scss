@@ -61,7 +61,6 @@
 @media screen and (min-width: 1024px) {
     .about-text {
         font-size: 1.3em;
-        line-height: 1.3em;
         padding: 24px 90px 0;
     }
 }
@@ -69,14 +68,12 @@
 @media screen and (max-width: 1023px) {
     .about-text {
         font-size: 18px;
-        line-height: 18px;
         padding: 16px 90px 0;
     }
 }
 @media screen and (max-width: 767px) {
     .about-text {
         font-size: 18px;
-        line-height: 18px;
         padding: 12px 20px 0;
     }
 }
