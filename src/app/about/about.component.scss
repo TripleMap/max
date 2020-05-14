@@ -75,6 +75,20 @@
     .about-text {
         font-size: 1.3em;
         line-height: 1.3em;
+        padding: 24px 90px 0;
+    }
+    .about-flex {
+        padding: 24px 90px 0;
+        .about-text {
+            padding: 0 !important;
+
+            &:first-child {
+                padding-right: 8px !important;
+            }
+            &:last-child {
+                padding-left: 8px !important;
+            }
+        }
     }
 }
 
@@ -82,15 +96,40 @@
     .about-text {
         font-size: 18px;
         line-height: 18px;
+        padding: 16px 90px 0;
+    }
+    .about-flex {
+        padding: 16px 90px 0;
+        .about-text {
+            padding: 0 !important;
+
+            &:first-child {
+                padding-right: 8px !important;
+            }
+            &:last-child {
+                padding-left: 8px !important;
+            }
+        }
     }
 }
 @media screen and (max-width: 767px) {
     .about-text {
         font-size: 18px;
         line-height: 18px;
+        padding: 12px 20px 0;
     }
 
     .about-flex {
+        padding: 12px 20px 0;
         flex-direction: column;
+        .about-text {
+            padding-top: 12px !important;
+            &:first-child {
+                padding-right: 0 !important;
+            }
+            &:last-child {
+                padding-left: 0 !important;
+            }
+        }
     }
 }
