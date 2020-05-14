@@ -5,6 +5,9 @@
     (touchmove)="touchmove($event)"
     (mousewheel)="mousewheel($event)"
 >
+    <div class="about-image" *ngIf="!isDesktop">
+        <img src="assets/galery/portrait.jpg" alt="Это я" />
+    </div>
     <div>
         <div class="about-text">
             Моя дружба с фотографией началась более 10 лет назад. Репортажной и портретной съемкой занимаюсь с 2016
@@ -25,7 +28,7 @@
             съемке вы можете мне написать или позвонить.
         </div>
     </div>
-    <div class="about-image">
+    <div class="about-image" *ngIf="isDesktop">
         <img src="assets/galery/portrait.jpg" alt="Это я" />
     </div>
 </div>
