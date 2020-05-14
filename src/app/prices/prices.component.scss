@@ -14,10 +14,15 @@
         height: calc(100% - 108px);
     }
 
+    .desktop-wrapper {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
     .mobile-wrapper {
         overflow: auto;
-        height: calc(100% - 80px);
-        margin-top: 40px;
+        max-height: calc(100% - 80px);
     }
 
     .subheader {
