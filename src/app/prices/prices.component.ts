@@ -20,9 +20,8 @@ export class PricesComponent {
     touchmove(e: TouchEvent) {
         const el = document.getElementById('prices-mobile-wrapper');
         if (el) {
-            let needBottom =
-                el.scrollTop === el.scrollHeight - el.offsetHeight && this.ts > e.changedTouches[0].clientY;
-            let needTop = el.scrollTop === 0 && this.ts < e.changedTouches[0].clientY;
+            let needBottom = el.scrollTop >= el.scrollHeight - el.offsetHeight && this.ts > e.changedTouches[0].clientY;
+            let needTop = el.scrollTop <= 0 && this.ts < e.changedTouches[0].clientY;
             if (!needBottom && !needTop) {
                 e.stopPropagation();
             }
@@ -31,8 +30,8 @@ export class PricesComponent {
     mousewheel(e: WheelEvent) {
         const el = document.getElementById('prices-mobile-wrapper');
         if (el) {
-            let needBottom = el.scrollTop === el.scrollHeight - el.offsetHeight && e.deltaY > 0;
-            let needTop = el.scrollTop === 0 && e.deltaY < 0;
+            let needBottom = el.scrollTop >= el.scrollHeight - el.offsetHeight && e.deltaY > 0;
+            let needTop = el.scrollTop <= 0 && e.deltaY < 0;
             if (!needBottom && !needTop) {
                 e.stopPropagation();
             }
