@@ -31,10 +31,10 @@ export class GaleryComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
         setTimeout(() => {
-            const totalImages = 38;
+            const totalImages = 39;
             for (let i = 0; i < totalImages; i++) {
                 setTimeout(() => {
-                    this.imageList = [...this.imageList, `assets/galery/galery/${i + 1}.jpg`];
+                    this.imageList = [...this.imageList, `assets/galery/galery/${i}.jpg`];
                     this.cdr.detectChanges();
                 }, 0);
             }
@@ -55,9 +55,9 @@ export class GaleryComponent implements AfterViewInit {
     private showGaleryItem(direction): void {
         if (!direction || this.imageI === undefined) return;
         if (
-            (this.imageI > 0 && this.imageI < 37) ||
+            (this.imageI > 0 && this.imageI < 38) ||
             (this.imageI === 0 && direction === 'next') ||
-            (this.imageI === 37 && direction === 'prev')
+            (this.imageI === 38 && direction === 'prev')
         ) {
             direction === 'next' ? this.imageI++ : this.imageI--;
             this.imageIndex.emit(this.imageI);

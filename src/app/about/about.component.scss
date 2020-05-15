@@ -28,8 +28,9 @@
     .mobile-wrapper {
         overflow: auto;
         max-height: calc(100% - 80px);
+        margin-top: 40px;
         .about-image {
-            margin-top: 16px;
+            margin-top: 28px;
             img {
                 max-width: 120px;
             }

@@ -14,7 +14,7 @@ export class ImageViewerComponent {
     @Input() set imageIndex(i: number) {
         if (i !== undefined && i !== null) {
             this._imageIndex = i;
-            this.imagePath = `assets/galery/${this.isDesktop ? 'desktop-f' : 'mobile-f'}/${i + 1}.jpg`;
+            this.imagePath = `assets/galery/${this.isDesktop ? 'galery-d' : 'galery-m'}/${i}.jpg`;
         }
     }
     get imageIndex() {
