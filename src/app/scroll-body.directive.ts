@@ -22,19 +22,33 @@ export class ScrollBodyDirective {
         this.scroll.next();
     }
 
-    @HostListener('mousewheel', ['$event'])
-    wait(e: any) {
+    @HostListener('wheel', ['$event'])
+    waitTochPad(e: any) {
         e.stopPropagation();
         e.preventDefault();
         this.upDown = e.deltaY > 0 ? true : false;
         this.scroll.next();
     }
 
+    @HostListener('document:keydown', ['$event']) keyPress(e: any) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (window['imageViewer']) return;
+        if (e.keyCode === 40) {
+            this.upDown = true;
+            this.scroll.next();
+        }
+        if (e.keyCode === 38) {
+            this.upDown = false;
+            this.scroll.next();
+        }
+    }
+
     @Output() onScroll: EventEmitter<boolean> = new EventEmitter();
     constructor() {}
 
     public ngOnInit(): void {
-        this.scroll.pipe(debounceTime(50)).subscribe((e) => (this.upDown ? this.scrollNext() : this.scrollPrev()));
+        this.scroll.pipe(debounceTime(100)).subscribe((e) => (this.upDown ? this.scrollNext() : this.scrollPrev()));
     }
 
     public scrollNext(): void {

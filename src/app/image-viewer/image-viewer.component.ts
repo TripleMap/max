@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, HostListener } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
@@ -15,6 +15,7 @@ export class ImageViewerComponent {
         if (i !== undefined && i !== null) {
             this._imageIndex = i;
             this.imagePath = `assets/galery/${this.isDesktop ? 'galery-d' : 'galery-m'}/${i}.jpg`;
+            window['imageViewer'] = true;
         }
     }
     get imageIndex() {
@@ -25,10 +26,26 @@ export class ImageViewerComponent {
     @Output() onNext: EventEmitter<void> = new EventEmitter();
     @Output() onPrev: EventEmitter<void> = new EventEmitter();
 
+    @HostListener('document:keydown', ['$event']) keyPress(e: any) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (!window['imageViewer']) return;
+        if (e.keyCode === 39 || e.keyCode === 40) {
+            this.onNextClick();
+        }
+        if (e.keyCode === 37 || e.keyCode === 38) {
+            this.onPrevClick();
+        }
+
+        if (e.keyCode === 27) {
+            this.closeImage();
+        }
+    }
     constructor(private deviceService: DeviceDetectorService) {
         this.isDesktop = this.deviceService.isDesktop();
     }
     public closeImage() {
+        window['imageViewer'] = false;
         this.close.emit();
     }
 

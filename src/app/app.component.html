@@ -7,6 +7,7 @@
     *ngIf="!isDesktop"
 ></app-mobile-menu>
 <app-body
+    appScrollBody
     id="body"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
     (onScroll)="onScroll($event)"

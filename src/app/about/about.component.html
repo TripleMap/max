@@ -3,7 +3,7 @@
     [attr.id]="isDesktop ? '' : 'about-mobile-wrapper'"
     (touchstart)="touchstart($event)"
     (touchmove)="touchmove($event)"
-    (mousewheel)="mousewheel($event)"
+    (wheel)="mousewheel($event)"
 >
     <div class="about-image" *ngIf="!isDesktop">
         <img src="assets/galery/portrait.jpg" alt="Это я" />

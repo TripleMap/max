@@ -7,20 +7,15 @@
     align-items: center;
     justify-content: center;
 
-    &.mobile {
-        height: 100%;
-    }
-    &.desktop {
-        min-height: 840px;
-    }
     .galery-wrapper {
         margin-top: 32px;
         display: flex;
         overflow: hidden;
         padding: 0 32px;
-        max-height: 460px;
+        max-height: 60vh;
+        height: 460px;
         padding-bottom: 32px;
-
+        width: 100%;
         .galery-item {
             cursor: pointer;
         }
@@ -40,9 +35,9 @@
     &.desktop {
         .galery-item {
             max-height: 460px;
-            max-width: 100%;
             margin-left: 32px;
             cursor: pointer;
+            height: 100%;
         }
     }
 }

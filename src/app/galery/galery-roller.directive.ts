@@ -62,11 +62,24 @@ export class GaleryRollerDirective {
         this.eY = 0;
     }
 
-    @HostListener('mousewheel', ['$event'])
+    @HostListener('wheel', ['$event'])
     wait(e: any) {
         e.stopPropagation();
         e.preventDefault();
         e.deltaY > 0 ? this.next() : this.prev();
+    }
+
+    @HostListener('document:keydown', ['$event']) keyPress(e: any) {
+        e.stopPropagation();
+        e.preventDefault();
+        if (window['activePage'] !== 'galery') return;
+        if (window['imageViewer']) return;
+        if (e.keyCode === 39) {
+            this.next();
+        }
+        if (e.keyCode === 37) {
+            this.prev();
+        }
     }
 
     private sX = 0;
@@ -99,7 +112,7 @@ export class GaleryRollerDirective {
     }> = new EventEmitter();
 
     constructor() {
-        this.showGalery.pipe(debounceTime(50)).subscribe((direction) => this.showGaleryItem(direction));
+        this.showGalery.pipe(debounceTime(40)).subscribe((direction) => this.showGaleryItem(direction));
     }
 
     private galeryMove = (d): void => (d === 'l' || d === 'u' ? this.next() : this.prev());
@@ -114,7 +127,7 @@ export class GaleryRollerDirective {
 
     private showGaleryItem(direction): void {
         gsap.to(document.getElementById('galery-wrapper'), {
-            duration: 0.45,
+            duration: 0.4,
             scrollTo: { x: `${direction ? '+=500' : '-=500'}` },
             ease: Cubic.easeOut,
         });

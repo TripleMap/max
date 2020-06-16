@@ -3,7 +3,7 @@
     class="galery"
     (touchstart)="touchstart($event)"
     (touchmove)="touchmove($event)"
-    (mousewheel)="mousewheel($event)"
+    (wheel)="mousewheel($event)"
 >
     <ng-container *ngFor="let image of imageList; let i = index" ()>
         <div

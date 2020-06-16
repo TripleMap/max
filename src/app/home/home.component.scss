@@ -4,13 +4,6 @@
     height: 100%;
     display: flex;
     justify-content: center;
-
-    &.mobile {
-        height: 100%;
-    }
-    &.desktop {
-        min-height: 840px;
-    }
 }
 
 @media screen and (min-width: 1023px) {

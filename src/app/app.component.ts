@@ -32,12 +32,15 @@ export class AppComponent implements OnInit {
 
     public scrollTo(fragment): void {
         this.active = fragment;
+        window['activePage'] = fragment;
         this.cdr.detectChanges();
         gsap.to(document.getElementById('body'), {
             duration: 0.7,
             scrollTo: `#${fragment}`,
             ease: Quart.easeInOut,
         });
+        const elem = document.getElementById(`#${fragment}`);
+        if (elem) elem.focus();
     }
 
     public onScroll(e: boolean): void {

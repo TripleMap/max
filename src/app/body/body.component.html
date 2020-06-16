@@ -1,7 +1,6 @@
 <app-home
     id="home"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-home>
 <app-galery
@@ -11,7 +10,6 @@
     [onNextSub]="onNextSub"
     [onPrevSub]="onPrevSub"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-galery>
 
@@ -22,24 +20,20 @@
     [onNextSub]="onNextSub"
     [onPrevSub]="onPrevSub"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-mobile-galery>
 <app-about
     id="about"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-about>
 <app-prices
     id="prices"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-prices>
 <app-contacts
     id="contacts"
     [ngClass]="{ mobile: !isDesktop, desktop: isDesktop }"
-    appScrollBody
     (onScroll)="onScroll.emit($event)"
 ></app-contacts>

@@ -7,23 +7,10 @@
     align-items: center;
     justify-content: center;
 
-    &.mobile {
-        height: 100%;
-    }
-    &.desktop {
-        height: calc(100% - 108px);
-    }
-
     .desktop-wrapper {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        .about-image {
-            margin-top: 48px;
-            img {
-                max-width: 200px;
-            }
-        }
     }
     .mobile-wrapper {
         overflow: auto;
@@ -57,25 +44,102 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) and (min-height: 700px) {
     .about-text {
         font-size: 1.3em;
         line-height: 1.3em;
         padding: 24px 90px 0;
     }
+
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 48px;
+            img {
+                max-width: 200px;
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1280px) and (max-height: 699px) {
+    .about-text {
+        font-size: 1.2em;
+        line-height: 1.2em;
+        padding: 12px 90px 0;
+    }
+
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 36px;
+            img {
+                max-width: 160px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) and (min-height: 700px) {
     .about-text {
         font-size: 18px;
         line-height: 18px;
         padding: 16px 90px 0;
     }
+
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 48px;
+            img {
+                max-width: 200px;
+            }
+        }
+    }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 1279px) and (max-height: 699px) {
+    .about-text {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 12px 36px 0;
+    }
+
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 20px;
+            img {
+                max-width: 140px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-height: 700px) {
     .about-text {
         font-size: 18px;
         line-height: 18px;
         padding: 12px 20px 0;
+    }
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 20px;
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (max-height: 699px) {
+    .about-text {
+        font-size: 16px;
+        line-height: 16px;
+        padding: 12px 20px 0;
+    }
+    .desktop-wrapper {
+        .about-image {
+            margin-top: 16px;
+            img {
+                max-width: 120px;
+            }
+        }
     }
 }
