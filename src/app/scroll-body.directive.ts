@@ -34,18 +34,17 @@ export class ScrollBodyDirective {
         e.stopPropagation();
         e.preventDefault();
         if (window['imageViewer']) return;
-        if (e.keyCode === 40) {
+        if (e.keyCode === 40 || e.keyCode === 34 || e.keyCode === 32) {
             this.upDown = true;
             this.scroll.next();
         }
-        if (e.keyCode === 38) {
+        if (e.keyCode === 38 || e.keyCode === 33) {
             this.upDown = false;
             this.scroll.next();
         }
     }
 
     @Output() onScroll: EventEmitter<boolean> = new EventEmitter();
-    constructor() {}
 
     public ngOnInit(): void {
         this.scroll.pipe(debounceTime(100)).subscribe((e) => (this.upDown ? this.scrollNext() : this.scrollPrev()));

@@ -74,7 +74,7 @@ export class GaleryRollerDirective {
         e.preventDefault();
         if (window['activePage'] !== 'galery') return;
         if (window['imageViewer']) return;
-        if (e.keyCode === 39) {
+        if (e.keyCode === 39 || e.keyCode === 32) {
             this.next();
         }
         if (e.keyCode === 37) {
